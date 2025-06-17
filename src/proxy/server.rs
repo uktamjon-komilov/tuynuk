@@ -1,6 +1,6 @@
 use std::net::SocketAddr;
 
-use tokio::{io::AsyncReadExt, net::TcpListener};
+use tokio::{io::{AsyncReadExt, AsyncWriteExt}, net::TcpListener};
 
 use super::{error::HttpError, http::HttpRequest};
 
@@ -49,7 +49,12 @@ async fn handle_connection(stream: &mut tokio::net::TcpStream) -> Result<(), Htt
 
     match HttpRequest::parse(&buffer[..bytes_read]) {
         Ok(request) => {
-            println!("Parse request: {:#?}", request);
+            // println!("Parse request: {:#?}", request);
+            // println!("{:?}", &request.to_backend_request());
+            println!("{:?}", String::from_utf8_lossy(&(request.to_backend_request())));
+            let simple_response = "HTTP/2.0 200 OK\r\n\r\nProxy works!";
+            let write_resp = stream.write_all(simple_response.as_bytes()).await;
+            println!("{:?}", write_resp);
         }
         Err(e) => {
             eprintln!("Failed to parse HTTP request: {}", e);
