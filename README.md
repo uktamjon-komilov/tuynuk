@@ -1,4 +1,4 @@
-# Tunnel
+# Tuynuk
 
 A modern tunneling tool built in Rust, inspired by ngrok and [jprq.io](https://jprq.io).
 
@@ -10,4 +10,4 @@ See the [roadmap](ROADMAP.md) for detailed feature plans.
 
 ## License
 
-[Your chosen license]
+This project is licensed under the [GNU Affero General Public License v3.0](LICENSE) (AGPL-3.0).
