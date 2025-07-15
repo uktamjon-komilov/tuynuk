@@ -15,7 +15,7 @@ A modern tunneling tool inspired by ngrok and [jprq.io](https://jprq.io/), built
 - [x] **Port Scanner** - Network discovery and port availability checking
 - [x] **HTTP Request Parser** - Parse and validate HTTP requests
 - [x] **Basic HTTP Server** - Foundation server implementation
-- [ ] **Reverse Proxy** - Request forwarding and load balancing
+- [x] **Reverse Proxy** - Request forwarding and load balancing
 - [ ] **Connection Pooling** - Efficient connection management
 - [ ] **Rate Limiting** - Traffic control and abuse prevention
 
