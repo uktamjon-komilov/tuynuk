@@ -25,3 +25,7 @@ path = "src/client.rs"
 [[bin]]
 name = "port-scanner"
 path = "src/port_scanner.rs"
+
+[[bin]]
+name = "reverse-proxy"
+path = "src/reverse_proxy.rs"
